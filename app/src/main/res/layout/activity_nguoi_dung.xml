@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".NguoiDungActivity">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edtaikhoan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ten Dang Nhap"/>
+    <EditText
+        android:id="@+id/edmatkhau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mat khau"/>
+    <EditText
+        android:id="@+id/edphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="So dien thoai"/>
+    <EditText
+        android:id="@+id/edhoten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ho Ten"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:onClick="themnguoidung"
+            android:id="@+id/btnthem"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Them"/>
+        <Button
+            android:id="@+id/btnhuy"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huy"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnlistND"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List Nguoi dung"/>
+</LinearLayout>
