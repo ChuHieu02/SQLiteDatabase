@@ -54,10 +54,5 @@
             android:layout_height="wrap_content"
             android:text="Huy"/>
     </LinearLayout>
-    <Button
-        android:onClick="openlistND"
-        android:id="@+id/btnlistND"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="List Nguoi dung"/>
+
 </LinearLayout>
