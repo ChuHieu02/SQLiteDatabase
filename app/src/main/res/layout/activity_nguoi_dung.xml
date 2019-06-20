@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:hint="Ten Dang Nhap"/>
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/edmatkhau"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,6 +47,7 @@
             android:layout_height="wrap_content"
             android:text="Them"/>
         <Button
+            android:onClick="btnhuy"
             android:id="@+id/btnhuy"
             android:layout_weight="1"
             android:layout_width="wrap_content"
@@ -53,6 +55,7 @@
             android:text="Huy"/>
     </LinearLayout>
     <Button
+        android:onClick="openlistND"
         android:id="@+id/btnlistND"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

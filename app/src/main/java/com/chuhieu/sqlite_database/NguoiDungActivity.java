@@ -1,5 +1,6 @@
 package com.chuhieu.sqlite_database;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,17 +29,29 @@ public class NguoiDungActivity extends AppCompatActivity {
     public void themnguoidung(View view) {
         nguoiDungDao= new NguoiDungDao(NguoiDungActivity.this);
          nguoidung = new Nguoidung(
-                 edhoten.getText().toString(),
-                 edphone.getText().toString(),
                  edtaikhoan.getText().toString(),
-                 edmatkhau.getText().toString());
+                 edmatkhau.getText().toString(),
+                 edphone.getText().toString(),
+                 edhoten.getText().toString()
+                 );
          if (nguoiDungDao.insertNguoiDung(nguoidung)==1)
          {
              Toast.makeText(getApplicationContext(),"Them Thanh Cong",
                      Toast.LENGTH_LONG).show();
+             startActivity(new Intent(NguoiDungActivity.this,ListNguoidungActivity.class));
          }else {
              Toast.makeText(getApplicationContext(),"Co loi xay ra",
                      Toast.LENGTH_LONG).show();
          }
+    }
+
+    public void openlistND(View view) {
+
+
+    }
+
+    public void btnhuy(View view) {
+      startActivity(new Intent(NguoiDungActivity.this,ListNguoidungActivity.class));
+
     }
 }

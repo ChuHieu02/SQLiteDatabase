@@ -3,6 +3,8 @@ package com.chuhieu.sqlite_database.model;
 public class Nguoidung {
     private String UserName, PassWords, Phone , hoten;
 
+    public Nguoidung(){}
+
     public Nguoidung(String userName, String passWords, String phone, String hoten) {
         UserName = userName;
         PassWords = passWords;
