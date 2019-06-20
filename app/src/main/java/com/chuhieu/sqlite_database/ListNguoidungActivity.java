@@ -1,10 +1,12 @@
 package com.chuhieu.sqlite_database;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import com.chuhieu.sqlite_database.DAO.NguoiDungDao;
@@ -31,13 +33,23 @@ public class ListNguoidungActivity extends AppCompatActivity {
         nguoiDungDao= new NguoiDungDao(ListNguoidungActivity.this);
         nguoidungList=nguoiDungDao.getallNguoiDung();
         nguoidungAdapter= new NguoidungAdapter(nguoidungList,ListNguoidungActivity.this);
-
+//thiet lap linerlayout
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-
+//them adapter vao rv
         recyclerView.setAdapter(nguoidungAdapter);
+
+//floatActionbutton
+        FloatingActionButton floatingActionButton = findViewById(R.id.flbtnadd);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ListNguoidungActivity.this,NguoiDungActivity.class));
+            }
+        });
     }
+
 
 
 }

@@ -1,5 +1,7 @@
 package com.chuhieu.sqlite_database.adapter;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -14,7 +16,7 @@ import com.chuhieu.sqlite_database.R;
 import com.chuhieu.sqlite_database.model.Nguoidung;
 
 import java.util.List;
-import java.util.zip.Inflater;
+
 
 public class NguoidungAdapter extends RecyclerView.Adapter<NguoidungAdapter.NguoidungHolder> {
     private List<Nguoidung> nguoidungList;
@@ -51,9 +53,11 @@ public class NguoidungAdapter extends RecyclerView.Adapter<NguoidungAdapter.Nguo
 //        holder.tvmakhau.setText(nguoidung.getPassWords());
         holder.tvphone.setText(nguoidung.getPhone());
         holder.tvhoten.setText(nguoidung.getHoten());
+
         holder.imgclose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 //lay vi tri item
                 nguoidungList.get(position);
 //xoa item trong database

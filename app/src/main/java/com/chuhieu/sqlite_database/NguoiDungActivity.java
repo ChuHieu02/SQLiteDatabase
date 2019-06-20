@@ -45,10 +45,7 @@ public class NguoiDungActivity extends AppCompatActivity {
          }
     }
 
-    public void openlistND(View view) {
 
-
-    }
 
     public void btnhuy(View view) {
       startActivity(new Intent(NguoiDungActivity.this,ListNguoidungActivity.class));
